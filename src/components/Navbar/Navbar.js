@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import {} from "react-router-dom";
 import { Link as LinkR } from "react-router-dom";
 import { styled } from "styled-components";
+import { HiFire } from "react-icons/hi2";
+import { FaBars } from "react-icons/fa";
 
 const Nav = styled.div`
   background-color: #1c1e27;
@@ -89,12 +91,86 @@ const ButtonContainer = styled.div`
 `;
 const LanguageButton = styled.div``;
 
+const Span = styled.span`
+  padding: 0 4px;
+  font-weight: bold;
+  font-size: 18px;
+`;
+
+const MobileMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  position: absolute;
+  top: 80;
+  right: 0;
+  width: 100%;
+  padding: 12px 40px 24px 40px;
+  background: #1c1e27;
+  transition: all 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  border-radius: 0 0 20 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  opacity: ${({ open }) => (open ? "1" : "0")};
+  z-index: ${({ open }) => (open ? "1" : "-1")};
+`;
+
+const MobileMenuLinks = styled(LinkR)`
+  color: #f2f3f4;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  &: hover {
+    color: #854ce6;
+  }
+`;
+
+const GitHubButton = styled.a`
+  border: 1.8px solid #854ce6;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  border-radius: 20px;
+  color: ;
+  cursor: pointer;
+  padding: 0 20px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.6s ease-in-out;
+  :hover {
+    background: ;
+    color: ;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+`;
+
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <Nav>
       <NavConatiner>
-        <NavLogo>Logo</NavLogo>
-        <MobileIcon></MobileIcon>
+        <NavLogo to="/">
+          <a
+            style={{
+              display: "flex",
+              alignItems: "center",
+              color: "white",
+              marginBottom: "20;",
+              cursor: "pointer",
+            }}
+          >
+            <HiFire size="3rem" /> <Span>Dawid Urbaniak</Span>
+          </a>
+        </NavLogo>
+        <MobileIcon>
+          <FaBars onClick={() => setOpen(!open)} />
+        </MobileIcon>
         <NavItems>
           <NavLink href="#about">O mnie</NavLink>
           <NavLink href="#skills">Umiejętności</NavLink>
@@ -105,6 +181,62 @@ const Navbar = () => {
           <LanguageButton>PL/EN</LanguageButton>
         </ButtonContainer>
       </NavConatiner>
+      {open && (
+        <MobileMenu open={open}>
+          <MobileMenuLinks
+            href="#about"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            About
+          </MobileMenuLinks>
+          <MobileMenuLinks
+            href="#skills"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Skills
+          </MobileMenuLinks>
+          <MobileMenuLinks
+            href="#experience"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Experience
+          </MobileMenuLinks>
+          <MobileMenuLinks
+            href="#projects"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Projects
+          </MobileMenuLinks>
+          <MobileMenuLinks
+            href="#education"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            Education
+          </MobileMenuLinks>
+          <GitHubButton
+            style={{
+              padding: "10px 16px",
+              background: "",
+              color: "white",
+              width: "max-content",
+            }}
+            href="/"
+            target="_blank"
+          >
+            Github Profile
+          </GitHubButton>
+        </MobileMenu>
+      )}
     </Nav>
   );
 };
