@@ -1,9 +1,10 @@
 import React from "react";
 import { styled } from "styled-components";
 import HomeImage from "../../images/programmer.png";
+import HomeBgAnimation from "../HomeBgAnimation/Index";
 
 const HomeContainer = styled.div`
-  background-color: lightblue;
+  background-color: #1c1e2d;
   display: flex;
   justify-content: center;
   position: relative;
@@ -30,7 +31,7 @@ const HomeBg = styled.div`
   bottom: 0;
   left: 50%;
   overflow: hidden;
-  width: 100%;
+  width: 65%;
   height: 100%;
   padding: 0 30px;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -146,7 +147,9 @@ const Home = () => {
   return (
     <div id="about">
       <HomeContainer>
-        <HomeBg></HomeBg>
+        <HomeBg>
+          <HomeBgAnimation />
+        </HomeBg>
         <HomeInnerContainer>
           <HomeLeftContainer>
             <Title>
@@ -159,7 +162,6 @@ const Home = () => {
             </SubTitle>
           </HomeLeftContainer>
           <HomeRightContainer>
-            {" "}
             <Image src={HomeImage} alt="Home" />
           </HomeRightContainer>
         </HomeInnerContainer>
