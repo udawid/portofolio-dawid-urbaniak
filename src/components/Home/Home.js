@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import HomeImage from "../../images/programmer.png";
 
 const HomeContainer = styled.div`
   background-color: lightblue;
@@ -54,29 +55,29 @@ const HomeInnerContainer = styled.div`
 `;
 
 const HomeLeftContainer = styled.div`
-width: 100%
-order: 1; 
-@media screen and (max-width: 960px) {
-  order: 2;
-  margin-bottom: 32px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-@media screen and (max-width: 640px) {
-  order: 2;
-  margin-bottom: 32px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+  width: 100%;
+  order: 1;
+  @media screen and (max-width: 960px) {
+    order: 2;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 640px) {
+    order: 2;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 const HomeRightContainer = styled.div`
+  display: flex;
   width: 100%;
   order: 2;
-  dispaly: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 12px;
   @media screen and (max-width: 960px) {
     order: 1;
@@ -122,6 +123,25 @@ const SubTitle = styled.div`
   }
 `;
 
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  // max-width: 400px;
+  // max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+  @media (max-width: 768px) {
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  @media screen and (max-width: 640px) {
+    max-width: 280px;
+    max-height: 280px;
+  }
+`;
+
 const Home = () => {
   return (
     <div id="about">
@@ -138,7 +158,10 @@ const Home = () => {
               ipsumLorem ipsum
             </SubTitle>
           </HomeLeftContainer>
-          <HomeRightContainer></HomeRightContainer>
+          <HomeRightContainer>
+            {" "}
+            <Image src={HomeImage} alt="Home" />
+          </HomeRightContainer>
         </HomeInnerContainer>
       </HomeContainer>
     </div>
