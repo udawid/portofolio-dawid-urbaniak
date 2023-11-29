@@ -46,8 +46,8 @@ const SkillsContainer = styled.div`
 `;
 
 const Skill = styled.div`
-  width: 350px;
-  height: 300px;
+  width: 100%;
+  max-width: 500px;
   background-color: #1c1e27;
   border: 0.1px solid #854ce6;
   border-radius: 16px;
@@ -70,6 +70,39 @@ const SkillTitle = styled.h2`
   text-align: center;
 `;
 
+const SkillList = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+`;
+
+const SkillItem = styled.div`
+  display: grid;
+  align-items: center;
+  text-align: center;
+  //gap: 8px;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+  //border-radius: 12px;
+  //border: 1px solid white;
+  padding: 12px 16px
+  font-weight: 400
+
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 12px
+  }
+
+  @media (max-width: 500px) {
+    font-size: 14px;
+    padding: 6px 12px
+  }
+  `;
+
 const SkillImage = styled.img`
   width: 75px;
   filter: drop-shadow(4px 4px 2px #854ce6);
@@ -81,15 +114,18 @@ const Skills = () => {
       <Wrapper>
         <Title>Umiejętności</Title>
         <SkillsContainer>
-          {" "}
           <Skill>
             <SkillTitle>FrontEnd</SkillTitle>
-            {/* <SkillList>
+            <SkillList>
               <SkillItem>
-                
+                <SkillImage src={reactImg} alt="react" />
+                React
               </SkillItem>
-            </SkillList> */}
-            <SkillImage src={reactImg} alt="react" />
+              <SkillItem>
+                <SkillImage src={reactImg} alt="react" />
+                React
+              </SkillItem>
+            </SkillList>
           </Skill>
           <Skill>
             <SkillTitle>BackEnd</SkillTitle>
