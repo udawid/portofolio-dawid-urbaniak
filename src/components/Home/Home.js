@@ -2,6 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 import HomeImage from "../../images/programmer.png";
 import HomeBgAnimation from "../HomeBgAnimation/Index";
+import { Bio } from "../../data/data";
 
 const HomeContainer = styled.div`
   background-color: #1c1e2d;
@@ -155,11 +156,7 @@ const Home = () => {
             <Title>
               Cześć, jestem <b>Dawid!</b>
             </Title>
-            <SubTitle>
-              Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
-              ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
-              ipsumLorem ipsum
-            </SubTitle>
+            <SubTitle>{Bio.description}</SubTitle>
           </HomeLeftContainer>
           <HomeRightContainer>
             <Image src={HomeImage} alt="Home" />

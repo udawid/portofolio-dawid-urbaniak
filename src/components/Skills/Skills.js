@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import { skills } from "../../data/data";
 import reactImg from "./img/react.png";
 
 const Container = styled.div`
@@ -79,10 +80,10 @@ const SkillList = styled.div`
 `;
 
 const SkillItem = styled.div`
-  display: grid;
+  display: flex;
   align-items: center;
   text-align: center;
-  //gap: 8px;
+  gap: 12px;
   justify-content: center;
   font-size: 16px;
   color: white;
@@ -104,7 +105,7 @@ const SkillItem = styled.div`
   `;
 
 const SkillImage = styled.img`
-  width: 75px;
+  width: 35px;
   filter: drop-shadow(4px 4px 2px #854ce6);
 `;
 
@@ -114,35 +115,19 @@ const Skills = () => {
       <Wrapper>
         <Title>Umiejętności</Title>
         <SkillsContainer>
-          <Skill>
-            <SkillTitle>FrontEnd</SkillTitle>
-            <SkillList>
-              <SkillItem>
-                <SkillImage src={reactImg} alt="react" />
-                React
-              </SkillItem>
-              <SkillItem>
-                <SkillImage src={reactImg} alt="react" />
-                React
-              </SkillItem>
-            </SkillList>
-          </Skill>
-          <Skill>
-            <SkillTitle>BackEnd</SkillTitle>
-            {/* <SkillList>
-              <SkillItem>
-                <SkillImage src="" alt="" />
-              </SkillItem>
-            </SkillList> */}
-          </Skill>
-          <Skill>
-            <SkillTitle>Others</SkillTitle>
-            {/* <SkillList>
-              <SkillItem>
-                <SkillImage src="" alt="" />
-              </SkillItem>
-            </SkillList> */}
-          </Skill>
+          {skills.map((skill) => (
+            <Skill>
+              <SkillTitle>{skill.title}</SkillTitle>
+              <SkillList>
+                {skill.skills.map((item) => (
+                  <SkillItem>
+                    <SkillImage src={item.image} alt={item.name} />
+                    {item.name}
+                  </SkillItem>
+                ))}
+              </SkillList>
+            </Skill>
+          ))}
         </SkillsContainer>
       </Wrapper>
     </Container>
