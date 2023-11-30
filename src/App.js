@@ -1,9 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
+import { styled } from "styled-components";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
-import { styled } from "styled-components";
+import Experience from "./components/Experience/Experience";
 
 const Body = styled.div`
   background-color: #1c1c27;
@@ -34,6 +35,7 @@ function App() {
         <Home />
         <Wrapper>
           <Skills />
+          <Experience />
         </Wrapper>
       </Body>
     </Router>
