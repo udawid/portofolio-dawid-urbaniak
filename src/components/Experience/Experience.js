@@ -7,6 +7,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { experiences } from "../../data/data";
+import ExperienceCard from "../Cards/ExperienceCard";
 
 const Container = styled.div`
   display: flex;
@@ -86,8 +87,7 @@ const Experience = () => {
                   )}
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
-                  {/* <ExperienceCard experience={experience} /> */}
-                  Hello
+                  <ExperienceCard experience={experience} />
                 </TimelineContent>
               </TimeLineItem>
             ))}
