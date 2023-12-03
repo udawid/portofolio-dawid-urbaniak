@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
+import Project from "./components/Project/Project";
 
 const Body = styled.div`
   background-color: #1c1c27;
@@ -37,6 +38,7 @@ function App() {
           <Skills />
           <Experience />
         </Wrapper>
+        <Project />
       </Body>
     </Router>
   );
