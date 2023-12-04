@@ -16,12 +16,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   gap: 12px;
 
-  // @media screen and (max-width: 768px) {
-  //   flex-direction: column;
-  // }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.div`
@@ -46,12 +47,21 @@ const Desc = styled.div`
   }
 `;
 
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+`;
+
 const Project = () => {
   return (
     <Container id="projects">
       <Wrapper>
         <Title>Projekty</Title>
         <Desc>Lorem ipsum lorem ipsum lorem</Desc>
+        <CardContainer></CardContainer>
       </Wrapper>
     </Container>
   );
