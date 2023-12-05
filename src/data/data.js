@@ -121,3 +121,42 @@ export const experiences = [
     desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
   },
 ];
+
+export const projects = [
+  {
+    id: 0,
+    title: "Lorem",
+    date: "Jun 2023 - Jul 2023",
+    description: "Lorem ipsum lorem ipsum",
+    image:
+      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+    tags: ["Docker", "AWS", "DuckDNS", "Eslint"],
+    category: "web app",
+    github: "https://github.com/udawid",
+    webapp: "coś będzie",
+  },
+  {
+    id: 1,
+    title: "Lorem borem",
+    date: "Apr 2023 - May 2023",
+    description: "Coś będzie",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "https://github.com/udawid",
+    webapp: "https://podstream.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Coś tam",
+    date: "Oct 2022 - Present",
+    description: "coś będzie",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
+    tags: ["React Js", "MongoDb", "Node Js"],
+    category: "web app",
+    github: "https://github.com/udawid",
+    webapp: "https://vexa-app.netlify.app/",
+  },
+];

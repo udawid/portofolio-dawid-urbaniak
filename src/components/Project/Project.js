@@ -1,5 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
+import ProjectCard from "../Cards/ProjectCard";
+import { projects } from "../../data/data";
 
 const Container = styled.div`
   display: flex;
@@ -61,7 +63,11 @@ const Project = () => {
       <Wrapper>
         <Title>Projekty</Title>
         <Desc>Lorem ipsum lorem ipsum lorem</Desc>
-        <CardContainer></CardContainer>
+        <CardContainer>
+          {projects.map((project) => (
+            <ProjectCard />
+          ))}
+        </CardContainer>
       </Wrapper>
     </Container>
   );
