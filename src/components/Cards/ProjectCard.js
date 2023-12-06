@@ -25,13 +25,47 @@ const Card = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 180px;
+  background-color: white;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+`;
+
+const Tags = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+  align-tems: center;
+`;
+
+const Tag = styled.div`
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  background-color: purple;
+  padding: 2px 8px;
+  border-radius: 10px;
+`;
+
+const Details = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  padding: 0 2px;
 `;
 
 const ProjectCard = ({ project }) => {
   return (
     <Card>
       <Image src={project.image} />
-      <Tags></Tags>
+      <Tags>
+        {project.tags.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
+      </Tags>
       <Details></Details>
     </Card>
   );

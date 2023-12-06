@@ -65,7 +65,7 @@ const Project = () => {
         <Desc>Lorem ipsum lorem ipsum lorem</Desc>
         <CardContainer>
           {projects.map((project) => (
-            <ProjectCard />
+            <ProjectCard project={project} />
           ))}
         </CardContainer>
       </Wrapper>
