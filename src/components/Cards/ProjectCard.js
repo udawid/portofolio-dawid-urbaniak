@@ -57,6 +57,26 @@ const Details = styled.div`
   padding: 0 2px;
 `;
 
+const Title = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+`;
+
+const Date = styled.div`
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 2px;
+  color: white;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+`;
+
 const ProjectCard = ({ project }) => {
   return (
     <Card>
@@ -66,7 +86,10 @@ const ProjectCard = ({ project }) => {
           <Tag key={tag}>{tag}</Tag>
         ))}
       </Tags>
-      <Details></Details>
+      <Details>
+        <Title>{project.title}</Title>
+        <Date>{project.date}</Date>
+      </Details>
     </Card>
   );
 };
