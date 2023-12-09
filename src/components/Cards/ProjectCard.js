@@ -77,6 +77,15 @@ const Date = styled.div`
   }
 `;
 
+const Description = styled.div`
+  font-weight: 400;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 8px;
+  max-width: 100%;
+`;
+
 const ProjectCard = ({ project }) => {
   return (
     <Card>
@@ -89,6 +98,7 @@ const ProjectCard = ({ project }) => {
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
+        <Description>{project.description}</Description>
       </Details>
     </Card>
   );
