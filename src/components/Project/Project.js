@@ -4,12 +4,18 @@ import ProjectCard from "../Cards/ProjectCard";
 import { projects } from "../../data/data";
 
 const Container = styled.div`
+  background: linear-gradient(
+    343.07deg,
+    rgba(132, 59, 206, 0.66) 5.71%,
+    rgba(132, 59, 206, 0) 64.83%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 1;
   align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 98%, 0 100%);
 `;
 
 const Wrapper = styled.div`
