@@ -63,12 +63,14 @@ const CardContainer = styled.div`
   gap: 28px;
 `;
 
-const Project = () => {
+const Project = ({ openModal, setOpenModal }) => {
   return (
     <Container id="projects">
       <Wrapper>
         <Title>Projekty</Title>
-        <Desc>Lorem ipsum lorem ipsum lorem</Desc>
+        <Desc>
+          Zapraszam do zapoznania się z moimi dotychczasowymi projektami.
+        </Desc>
         <CardContainer>
           {projects.map((project) => (
             <ProjectCard project={project} />

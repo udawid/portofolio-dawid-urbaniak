@@ -131,6 +131,14 @@ const ContactButton = styled.input`
   font-weight: 600;
 `;
 
+const Mail = styled.a`
+  text-decoration: none;
+  color: white;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Contact = () => {
   //hooks
   const [open, setOpen] = React.useState(false);
@@ -164,14 +172,22 @@ const Contact = () => {
     <Container id="contact">
       <Wrapper>
         <Title>Kontakt</Title>
-        <Desc>Lorem ipsum lorem ipsum lorem</Desc>
+        <Desc>
+          Skontaktuj się ze mną poprzez formularz poniżej lub bezpośrednio pod
+          adresem e-mail:
+          <Mail href="mailto:udawid00@gmail.com"> udawid00@gmail.com 📧</Mail>
+        </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactTitle>Napisz do mnie! 🚀</ContactTitle>
+          <ContactInput placeholder="Twój Email" name="from_email" />
+          <ContactInput placeholder="Twoje Imię" name="from_name" />
+          <ContactInput placeholder="Temat" name="subject" />
+          <ContactInputMessage
+            placeholder="Wiadomość"
+            rows="4"
+            name="message"
+          />
+          <ContactButton type="submit" value="Wyślij" />
         </ContactForm>
         <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
@@ -184,7 +200,7 @@ const Contact = () => {
             severity="success"
             sx={{ width: "100%" }}
           >
-            Email sent successfully!
+            Email został wysłany pomyślnie!
           </Alert>
         </Snackbar>
       </Wrapper>

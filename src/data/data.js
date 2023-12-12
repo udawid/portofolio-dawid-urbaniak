@@ -1,7 +1,11 @@
+import Tictactoe from "./imgProject/tictactoe.png";
+import TaskManager from "./imgProject/taskmanager.png";
+import Mapty from "./imgProject/mapty.png";
+
 export const Bio = {
   name: "Dawid Urbaniak",
   description:
-    "Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..",
+    "Witaj na mojej stronie! Jestem pasjonatem nowych technologii i programowania. Moja pasja do świata kodowania oraz ciągłe zainteresowanie innowacjami sprawiają, że każdy dzień to dla mnie nowa możliwość nauki i tworzenia.",
   github: "https://github.com/udawid",
   linkedin: "",
 };
@@ -10,11 +14,6 @@ export const skills = [
   {
     title: "Frontend",
     skills: [
-      {
-        name: "React",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-      },
       {
         name: "HTML",
         image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
@@ -28,6 +27,11 @@ export const skills = [
         name: "JavaScript",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+      },
+      {
+        name: "React",
+        image:
+          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
         name: "Bootstrap",
@@ -78,11 +82,6 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
       {
-        name: "Adobe XD",
-        image:
-          "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
-      },
-      {
         name: "Figma",
         image:
           "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
@@ -125,38 +124,38 @@ export const experiences = [
 export const projects = [
   {
     id: 0,
-    title: "Lorem",
-    date: "Jun 2023 - Jul 2023",
-    description: "Lorem ipsum lorem ipsum",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-    tags: ["Docker", "AWS", "DuckDNS", "Eslint"],
+    title: "Tic tac toe",
+    date: "",
+    description:
+      "Ten projekt jest prostą implementacją klasycznej gry Tic-Tac-Toe przy użyciu Reacta. Pozwala ona dwóm graczom na zmianę zaznaczać pola na siatce 3x3, dopóki jeden z nich nie wygra lub gra nie zakończy się remisem.",
+    image: Tictactoe,
+    tags: ["HTML", "CSS", "React"],
     category: "web app",
-    github: "https://github.com/udawid",
-    webapp: "coś będzie",
+    github: "https://github.com/udawid/Tic-tac-toe-React",
+    webapp: "https://tic-tac-toe-react0.netlify.app",
   },
   {
     id: 1,
-    title: "Lorem borem",
-    date: "Apr 2023 - May 2023",
-    description: "Coś będzie",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    title: "Task Manager",
+    date: "",
+    description:
+      "Task Manager to prosta aplikacja do zarządzania zadaniami, która pomaga użytkownikom organizować swoje obowiązki i śledzić postępy.",
+    image: TaskManager,
+    tags: ["HTML", "CSS", "React"],
     category: "web app",
-    github: "https://github.com/udawid",
-    webapp: "https://podstream.netlify.app/",
+    github: "https://github.com/udawid/task-manager-react",
+    webapp: "https://react-taskmanager0.netlify.app",
   },
   {
     id: 2,
-    title: "Coś tam",
-    date: "Oct 2022 - Present",
-    description: "coś będzie",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-    tags: ["React Js", "MongoDb", "Node Js"],
+    title: "Map app",
+    date: "",
+    description:
+      "Aplikacja do dokumentowania aktywności fizycznej, która wykorzystuje mapę z zewnętrznego API, lokalizacje użytkownika i zapisuje dane w local storage. ",
+    image: Mapty,
+    tags: ["HTML", "CSS", "JavaScript", "API", "LocalStorage"],
     category: "web app",
-    github: "https://github.com/udawid",
-    webapp: "https://vexa-app.netlify.app/",
+    github: "https://github.com/udawid/Map-App",
+    webapp: "https://maptyapps.netlify.app",
   },
 ];
