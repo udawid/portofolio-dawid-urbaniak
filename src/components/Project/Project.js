@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   gap: 12px;
-
+  padding: 10px 0 100px 0;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }

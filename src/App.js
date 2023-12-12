@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Project from "./components/Project/Project";
+import Contact from "./components/Contact/Contact";
 
 const Body = styled.div`
   background-color: #1c1c27;
@@ -39,6 +40,7 @@ function App() {
           <Experience />
         </Wrapper>
         <Project />
+        <Contact />
       </Body>
     </Router>
   );
