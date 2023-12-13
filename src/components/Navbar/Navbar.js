@@ -4,6 +4,7 @@ import { Link as LinkR } from "react-router-dom";
 import { styled } from "styled-components";
 import { HiFire } from "react-icons/hi2";
 import { FaBars } from "react-icons/fa";
+import { Bio } from "../../data/data";
 
 const Nav = styled.div`
   background-color: #1c1e27;
@@ -85,7 +86,8 @@ const ButtonContainer = styled.div`
   justify-content: end;
   width: 80%;
   height: 100%;
-  padding: 0 6px @media screen and (max-width: 640px) {
+  padding: 0 6px;
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -122,7 +124,7 @@ const MobileMenuLinks = styled(LinkR)`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-  &: hover {
+  &:hover {
     color: #854ce6;
   }
 `;
@@ -134,16 +136,16 @@ const GitHubButton = styled.a`
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ;
+  color: white;
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
-  :hover {
-    background: ;
-    color: ;
+  &:hover {
+    background: purple;
+    color: white;
   }
   @media screen and (max-width: 768px) {
     font-size: 14px;
@@ -178,7 +180,10 @@ const Navbar = () => {
           <NavLink href="#contact">Kontakt</NavLink>
         </NavItems>
         <ButtonContainer>
-          <LanguageButton>PL/EN</LanguageButton>
+          <LanguageButton></LanguageButton>
+          <GitHubButton href={Bio.github} target="_blank">
+            Github Profile
+          </GitHubButton>
         </ButtonContainer>
       </NavConatiner>
       {open && (

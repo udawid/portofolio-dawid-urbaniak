@@ -1,12 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { styled } from "styled-components";
+import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Project from "./components/Project/Project";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 
 const Body = styled.div`
   background-color: #1c1c27;
@@ -30,6 +33,7 @@ const Wrapper = styled.div`
 `;
 
 function App() {
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <Router>
       <Navbar />
@@ -37,10 +41,14 @@ function App() {
         <Home />
         <Wrapper>
           <Skills />
-          <Experience />
+          {/* <Experience /> */}
+          <Project openModal={openModal} setOpenModal={setOpenModal} />
         </Wrapper>
-        <Project />
         <Contact />
+        <Footer />
+        {openModal.state && (
+          <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+        )}
       </Body>
     </Router>
   );

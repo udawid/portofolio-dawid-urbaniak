@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
 import { skills } from "../../data/data";
-import reactImg from "./img/react.png";
 
 const Container = styled.div`
   display: flex;
