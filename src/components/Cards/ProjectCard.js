@@ -99,14 +99,14 @@ const ProjectCard = ({ project }) => {
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
         <Description>{project.description}</Description>
-        <ButtonGroup>
+        {/* <ButtonGroup>
           {/* <Button href={project?.github}>
             View Code
           </Button>
           <Button href={project?.webapp} >
             View Live App
-          </Button> */}
-        </ButtonGroup>
+          </Button>
+        </ButtonGroup> */}
       </Details>
     </Card>
   );

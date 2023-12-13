@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
 import MuiAlert from "@mui/material/Alert";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const Container = styled.div`
   display: flex;
@@ -136,16 +137,19 @@ const Mail = styled.a`
   color: white;
   &:hover {
     text-decoration: underline;
+    color: purple;
   }
 `;
 
 const Contact = () => {
   //hooks
   const [open, setOpen] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     emailjs
       .sendForm(
         "service_qynyff6",
@@ -155,6 +159,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          setLoading(false);
           setOpen(true);
           form.current.reset();
         },
@@ -163,6 +168,8 @@ const Contact = () => {
         }
       );
   };
+
+  const handleLoading = () => {};
 
   const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -179,19 +186,23 @@ const Contact = () => {
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Napisz do mnie! 🚀</ContactTitle>
-          <ContactInput placeholder="Twój Email" name="from_email" />
-          <ContactInput placeholder="Twoje Imię" name="from_name" />
-          <ContactInput placeholder="Temat" name="subject" />
+          <ContactInput placeholder="Twój Email" name="from_email" required />
+          <ContactInput placeholder="Twoje Imię" name="from_name" required />
+          <ContactInput placeholder="Temat" name="subject" required />
           <ContactInputMessage
             placeholder="Wiadomość"
             rows="4"
             name="message"
+            required
           />
-          <ContactButton type="submit" value="Wyślij" />
+
+          {!loading && <ContactButton type="submit" value="Wyślij" />}
+          {loading && <LinearProgress />}
         </ContactForm>
         <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           open={open}
+          setLoading={() => setLoading(true)}
           autoHideDuration={6000}
           onClose={() => setOpen(false)}
         >
