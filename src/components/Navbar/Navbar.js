@@ -39,6 +39,9 @@ const NavLogo = styled(LinkR)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
+  color: white;
+  marginbottom: 20;
+  cursor: pointer;
   align-items: center;
   @media screen and (max-width: 640px) {
     padding: 0 0px;
@@ -160,17 +163,7 @@ const Navbar = () => {
     <Nav>
       <NavConatiner>
         <NavLogo to="/">
-          <a
-            style={{
-              display: "flex",
-              alignItems: "center",
-              color: "white",
-              marginBottom: "20;",
-              cursor: "pointer",
-            }}
-          >
-            <HiFire size="3rem" /> <Span>Dawid Urbaniak</Span>
-          </a>
+          <HiFire size="3rem" /> <Span>Dawid Urbaniak</Span>
         </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => setOpen(!open)} />
