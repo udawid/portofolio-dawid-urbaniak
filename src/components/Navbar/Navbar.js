@@ -16,6 +16,7 @@ const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
+
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
@@ -65,6 +66,7 @@ const NavItems = styled.ul`
   align-items: center;
   gap: 32px;
   list-style: none;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -118,7 +120,7 @@ const MobileMenu = styled.div`
   z-index: ${({ open }) => (open ? "1" : "-1")};
 `;
 
-const MobileMenuLinks = styled(LinkR)`
+const MobileMenuLinks = styled.a`
   color: #f2f3f4;
   font-weight: 500;
   cursor: pointer;
@@ -194,7 +196,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            About
+            O mnie
           </MobileMenuLinks>
           <MobileMenuLinks
             href="#skills"
@@ -202,31 +204,31 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            Skills
+            Umiejętności
           </MobileMenuLinks>
-          <MobileMenuLinks
+          {/* <MobileMenuLinks
             href="#experience"
             onClick={() => {
               setOpen(!open);
             }}
           >
             Experience
-          </MobileMenuLinks>
+          </MobileMenuLinks> */}
           <MobileMenuLinks
             href="#projects"
             onClick={() => {
               setOpen(!open);
             }}
           >
-            Projects
+            Projekty
           </MobileMenuLinks>
           <MobileMenuLinks
-            href="#education"
+            href="#contact"
             onClick={() => {
               setOpen(!open);
             }}
           >
-            Education
+            Kontakt
           </MobileMenuLinks>
           <GitHubButton
             style={{
@@ -235,7 +237,7 @@ const Navbar = () => {
               color: "white",
               width: "max-content",
             }}
-            href="/"
+            href={Bio.github}
             target="_blank"
           >
             Github Profile

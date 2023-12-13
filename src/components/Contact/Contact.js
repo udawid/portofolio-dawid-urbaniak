@@ -136,6 +136,7 @@ const Mail = styled.a`
   text-decoration: none;
   color: white;
   &:hover {
+    transition: all 0.3s ease-in-out;
     text-decoration: underline;
     color: purple;
   }

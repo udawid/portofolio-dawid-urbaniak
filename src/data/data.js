@@ -38,6 +38,10 @@ export const skills = [
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
       },
+      {
+        name: "MUI",
+        image: "https://mui.com/static/logo.png",
+      },
     ],
   },
   {
