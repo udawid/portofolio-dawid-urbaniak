@@ -1,6 +1,8 @@
 import Tictactoe from "./imgProject/tictactoe.png";
 import TaskManager from "./imgProject/taskmanager.png";
 import Mapty from "./imgProject/mapty.png";
+import Gatsby from "./imgProject/gatsby.PNG";
+import Pogoda from "./imgProject/pogoda.PNG";
 
 export const Bio = {
   name: "Dawid Urbaniak",
@@ -42,6 +44,15 @@ export const skills = [
         name: "MUI",
         image: "https://mui.com/static/logo.png",
       },
+      {
+        name: "GraphQL",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+      },
+      {
+        name: "Gatsby",
+        image: "https://www.gatsbyjs.com/Gatsby-Monogram.svg",
+      },
     ],
   },
   {
@@ -67,8 +78,7 @@ export const skills = [
     skills: [
       {
         name: "Git",
-        image:
-          "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+        image: "https://www.svgrepo.com/show/452210/git.svg",
       },
       {
         name: "GitHub",
@@ -86,9 +96,17 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
       {
-        name: "Figma",
+        name: "Android Studio",
         image:
-          "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
+          "https://www.svgrepo.com/show/424906/logo-google-android-studio.svg",
+      },
+      {
+        name: "Figma",
+        image: "https://www.svgrepo.com/show/448222/figma.svg",
+      },
+      {
+        name: "Contentful",
+        image: "https://www.svgrepo.com/show/353600/contentful.svg",
       },
     ],
   },
@@ -161,5 +179,37 @@ export const projects = [
     category: "web app",
     github: "https://github.com/udawid/Map-App",
     webapp: "https://maptyapps.netlify.app",
+  },
+  {
+    id: 3,
+    title: "Gatsby-App",
+    date: "",
+    description:
+      "Strona Internetowa stworzona w oparciu o framework Gatsby, zintegrowana z systemem zarządzania treścią Contentful, aby zapewnić łatwe i efektywne aktualizowanie zawartości",
+    image: Gatsby,
+    tags: [
+      "HTML",
+      "SCSS",
+      "JavaScript",
+      "Gatsby",
+      "React",
+      "GraphQL",
+      "Contentful",
+    ],
+    category: "web app",
+    github: "https://github.com/udawid/gatsby-project",
+    webapp: "https://gatsby00.netlify.app",
+  },
+  {
+    id: 4,
+    title: "Aplikacja pogodowa",
+    date: "",
+    description:
+      "Aplikacja pogodowa dla urządzeń z systemem Android, stworzona w języku Java. Dzięki wykorzystaniu API, dostarcza ona użytkownikom dokładne i aktualne informacje o pogodzie na całym świecie.",
+    image: Pogoda,
+    tags: ["Java", "Android Studio", "API"],
+    category: "mobile app",
+    github: "https://github.com/udawid/Pogoda2023",
+    webapp: "",
   },
 ];
