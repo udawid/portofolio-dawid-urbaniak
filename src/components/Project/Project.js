@@ -2,6 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 import ProjectCard from "../Cards/ProjectCard";
 import { projects } from "../../data/data";
+import Weather from "../Weather/Weather";
 
 const Container = styled.div`
   background: linear-gradient(
@@ -80,6 +81,8 @@ const Project = ({ openModal, setOpenModal }) => {
             />
           ))}
         </CardContainer>
+        <Title>Sprawdź pogodę dla swojego miasta</Title>
+        <Weather />
       </Wrapper>
     </Container>
   );
