@@ -67,12 +67,14 @@ const Desc = styled.div`
 const api = {
   key: "64a622f76c6aae4f47f3ee261b68b31d",
   base: "https://api.openweathermap.org/data/2.5",
+  img: "https://openweathermap.org/img/wn",
 };
 
 const Weather = () => {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState({});
 
+  //let imageUrl = ``;
   const searchPressed = () => {
     fetch(
       `${api.base}/weather?q=${search}&units=metric&lang=pl&appid=${api.key}`
@@ -95,9 +97,16 @@ const Weather = () => {
       <Button onClick={searchPressed}>Wyszukaj</Button>
       {typeof weather.main !== "undefined" ? (
         <Desc>
-          <p>{weather.name}</p>
-          <p>{weather.main.temp} °C</p>
+          <p>
+            {weather.name} - aktualnie jest {weather.main.temp} °C,
+          </p>
+          <p>odczuwalne {weather.main.feels_like} °C</p>
+          <img
+            src={api.img + `/${weather.weather[0].icon}@2x.png`}
+            alt="text"
+          />
           <p>{weather.weather[0].description}</p>
+          <p>Średnia prędkość wiatru: {weather.wind.speed} m/s</p>
         </Desc>
       ) : (
         ""
