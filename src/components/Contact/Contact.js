@@ -160,14 +160,16 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setLoading(false);
           setOpen(true);
           form.current.reset();
         },
         (error) => {
           console.log(error.text);
         }
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   const Alert = React.forwardRef(function Alert(props, ref) {

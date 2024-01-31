@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const Button = styled.button`
   text-decoration: none;
@@ -73,16 +74,32 @@ const api = {
 const Weather = () => {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState({});
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   //let imageUrl = ``;
   const searchPressed = () => {
+    setLoading(true);
     fetch(
       `${api.base}/weather?q=${search}&units=metric&lang=pl&appid=${api.key}`
     )
       .then((res) => res.json())
       .then((result) => {
-        setWeather(result);
-        console.log(result);
+        if (result.cod === "404") {
+          setError(`Miasto ${search} nie zostało znalezione.`);
+          setWeather({});
+        } else {
+          setWeather(result);
+          setError("");
+        }
+      })
+      .catch((error) => {
+        console.error("Błąd podczas żądania API:", error.message);
+        setError("Wystąpił błąd. Spróbuj ponownie później.");
+        setWeather({});
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
   return (
@@ -95,6 +112,10 @@ const Weather = () => {
         }}
       ></WeatherInput>
       <Button onClick={searchPressed}>Wyszukaj</Button>
+      <Desc>
+        {loading && <LinearProgress />}
+        {error && <p style={{ color: "red" }}>{error}</p>}
+      </Desc>
       {typeof weather.main !== "undefined" ? (
         <Desc>
           <p>
