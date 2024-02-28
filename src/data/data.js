@@ -59,8 +59,8 @@ export const skills = [
     title: "Backend",
     skills: [
       {
-        name: "Node Js",
-        image: "https://nodejs.org/static/images/logo.svg",
+        name: "C#",
+        image: "https://cdnlogo.com/logos/c/27/c.svg",
       },
       {
         name: "MySQL",
