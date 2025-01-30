@@ -31,28 +31,13 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "React",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-      },
-      {
         name: "Bootstrap",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
       },
       {
-        name: "MUI",
-        image: "https://mui.com/static/logo.png",
-      },
-      {
-        name: "GraphQL",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
-      },
-      {
-        name: "Gatsby",
-        image: "https://www.gatsbyjs.com/Gatsby-Monogram.svg",
-      },
+        name: "FluentUi-Blazor",
+        image: "https://www.nuget.org/profiles/fluentui-blazor/avatar?imageSize=512",
     ],
   },
   {
@@ -66,10 +51,6 @@ export const skills = [
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      },
-      {
-        name: "Postgresql",
-        image: "https://www.postgresql.org/media/img/about/press/elephant.png",
       },
     ],
   },
@@ -86,11 +67,6 @@ export const skills = [
           "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
       },
       {
-        name: "Netlify",
-        image:
-          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
-      },
-      {
         name: "VS Code",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
@@ -101,12 +77,8 @@ export const skills = [
           "https://www.svgrepo.com/show/424906/logo-google-android-studio.svg",
       },
       {
-        name: "Figma",
-        image: "https://www.svgrepo.com/show/448222/figma.svg",
-      },
-      {
-        name: "Contentful",
-        image: "https://www.svgrepo.com/show/353600/contentful.svg",
+        name: "Visual Studio",
+        image: "https://teamnet-software.pl//modules/gqgfileextensions/uploads/1700318644.png",
       },
     ],
   },
